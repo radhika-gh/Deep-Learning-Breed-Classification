@@ -1,0 +1,56 @@
+\chapter{Introduction}
+\label{ch:into}
+
+\section{Background}
+\label{sec:into_back}
+The growth in machine learning and image processing has opened doors for tools that can help with a variety of tasks, including identifying and classifying animal breeds. Knowing a pet’s breed can be helpful in veterinary clinics, shelters, and pet care businesses where accurate records are crucial. However, breed identification isn’t always easy, especially with images taken in an everyday setting that vary in quality, lighting, or angle. In this project, we focus on building a tool that uses machine learning to help recognize different breeds of cats and dogs. The goal is to simplify the process, save time, and improve accuracy in breed record-keeping.\cite{borwarnginn2021knowing}\cite{inproceedings}\cite{raduly2018dog}\cite{unknown}
+
+
+\section{Problem statement}
+\label{sec:intro_prob_art}
+The challenge we’re tackling is to create an algorithm that can correctly identify the breed of a cat or dog from an image. Current solutions struggle with accuracy, especially when dealing with breeds that look similar or when images are less than perfect. We aim to address these gaps by building a model that’s capable of learning from a limited amount of data, while still providing reliable results.
+
+\section{Aims and Objectives}
+\label{sec:intro_aims_obj}
+
+\noindent
+\textbf{Aim:} To develop a model that can accurately identify the breed of a cat or dog based on images, helping to streamline animal identification for real-world applications.
+\\[0.2cm]
+\noindent
+\textbf{Objectives:} Tasks undertaken to achieve the above aim :
+\begin{itemize}
+    \item Preparing images by making them consistent in size, removing background elements, and creating variations of each image to help the model learn better.
+    \item Designing a neural network to handle the task of breed classification.
+    \item Using transfer learning to make the model learn faster and more accurately by building on the knowledge from other pre-trained models.
+    \item Training the model using techniques like 3-Fold Cross-Validation to find the best settings and achieve reliable results.
+    \item Measuring how well the model performs in terms of accuracy and speed.
+\end{itemize}
+
+
+\section{Solution approach}
+\label{sec:intro_sol} 
+This section outlines the general approach used in developing our model. The methodology was designed to handle the classification of cats and dogs across 37 breeds with accuracy and efficiency. The main steps employed are as follows:
+\begin{enumerate}
+    \item \textbf{Data Preparation:} The images were resized to a standard format, unnecessary background elements were removed to help focus on the animal, and data augmentation techniques were applied. This included rotating and flipping images to make the model robust and less prone to overfitting.
+    
+    \item \textbf{Model Design:} A Convolutional Neural Network (CNN) was chosen for this project, as CNNs are well-suited for image classification along with applying transfer learning , using the InceptionV3 model as a base to use prior knowledge from a large dataset.
+    
+    \item \textbf{Training and Optimization:} The model was trained using 3-Fold Cross-Validation for optimization. Hyperparameters, mainly learning rate and dropout percentage were adjusted to find the best possible configuration for high accuracy.
+    
+    \item \textbf{Evaluation:} The model's performance was evaluated using confusion metrics such as accuracy, precision, and recall.
+\end{enumerate}
+
+\subsection{Data Preprocessing}
+\label{sec:intro_some_sub1}
+Data preprocessing included steps to prepare images for the model. All images were resized to ensure uniformity, and data augmentation (such as flipping, rotating, and scaling) was applied to increase diversity in the training data. Also, backgrounds were removed from images to allow model to focus only on the animals.
+
+\subsection{ Model Testing and Comparison}
+\label{sec:intro_some_sub2}
+A basic CNN model and a more complex model using transfer learning were tested. Their performance was compared based on speed, accuracy, and computational efficiency, allowing for a clear evaluation of which approach was most effective.
+
+\section{Summary of contributions and achievements} %  use this section 
+\label{sec:intro_sum_results}
+This project contributes a refined approach to breed identification for cats and dogs, utilizing a combination of transfer learning and data pre-processing. The final model achieves high classification accuracy and robustness, suitable for practical application in animal care facilities. Testing showed that pre-processing steps like background removal and data augmentation can significantly increase model accuracy, making this project valuable for better image classification methods in animal breed identification.\\[0.05cm]
+\noindent
+The developed model can serve as a tool in real-world applications where quick and reliable breed identification is required, reducing the need for manual identification and providing an accessible solution for animal shelters, veterinary clinics, and other related sectors.
+
